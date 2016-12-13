@@ -17,6 +17,7 @@
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{url}
+\usepackage{multirow}
 
 \usepackage{siunitx}
 \sisetup{locale = DE}  %, separate-uncertainty = true    kdybych chtel +/-
@@ -39,19 +40,28 @@
 \begin{document}
 
 \begin{titlepage}
-\includepdf[pages={1}]{./graficos/206-tit.pdf}
+\includepdf[pages={1}]{./graficos/titlelist.pdf}
 \end{titlepage}
 
 \section*{Pracovní úkoly}
 \begin{enumerate}
-\item ÚKOLY
+\item Změřte účiník:
+\begin{enumerate}
+\item rezistoru,
+\item kondenzátoru ($C=\SI{10}{\micro\farad}$),
+\item cívky.
+\end{enumerate}
+\item Spočtěte fázový posun proudu a napětí. Určete chybu měření. Diskutujte shodu výsledků s teoretickými hodnotami pro ideální prvky.
+\item Pro cívku vypočtěte indukčnost a odpor v sériovém a paralelním náhradním zapojení.
+\item Změřte účiník sériového a paralelního zapojení rezistoru a kondenzátoru pro kapacity v intervalu $C$ =  \mbox{1--\SI{10}{\micro\farad}} a spočtěte fázový posuv. Výsledky zpracujte graficky. Z naměřených hodnot stanovte odpor rezistoru a porovnejte ho s hodnotou přímo naměřenou digitálním multimetrem. Určete chyby měření a rozhodněte, které z obou zapojení je v daném případě vhodnější pro stanovení odporu.
+\item Změřte závislost proudu a výkonu na velikosti kapacity zařazené do sériového RLC obvodu pro kapacity do \SI{10}{\micro\farad}. Výsledky zpracujte graficky, v závislosti na zařazené kapacitě vyneste účiník, fázový posuv napětí vůči proudu a výkon.
+\item V průběhu měření seriového RC obvodu připojte na kondenzátor digitální osciloskop Tektronix a pozorujte změnu fáze napětí na kondenzátoru vzhledem k průběhu napětí zdroje v závislosti na velikosti nastavené kapacity v intervalu 1--\SI{10}{\micro\farad}. Popište kvalitativně pozorované jevy a vysvětlete je. Stručný popis ovládání a schema připojení osciloskopu je přiloženo u úlohy.
+
+
 \end{enumerate}
 
 %Teoretická část
 \input{teorie.tex}
-
-%Podmínky a měřící přístroje
-\input{podminky.tex}
 
 %Výsledky měření
 \input{vysledky.tex}
@@ -64,5 +74,7 @@
 
 
 \printbibliography[title={Seznam použité literatury}]
+
+\includepdf[pages={1}]{./tabulka.pdf}
 
 \end{document}
